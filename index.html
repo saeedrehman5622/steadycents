@@ -236,7 +236,7 @@
               <div class="card"><h3>Compound Interest Calculator</h3><p>Watch regular saving grow over time, with a year-by-year chart and a clear split between your money and interest earned.</p><a class="go" href="#/calculators/compound-interest">See growth over time →</a></div>
               <div class="card"><h3>Emergency Fund Calculator</h3><p>Work out how many months of essential expenses to hold, your target amount, and how long it will take to get there.</p><a class="go" href="#/calculators/emergency-fund">Find my target →</a></div>
             </div>
-            <p style="margin-top:16px"><a href="#/calculators">See all ten calculators</a>, including savings goals, loan payments, mortgages, snowball vs. avalanche and inflation.</p>
+            <p style="margin-top:16px"><a href="#/calculators">See all eleven calculators</a>, including savings goals, loan payments, mortgages, snowball vs. avalanche and inflation.</p>
           </section>
 
           <section class="block" aria-labelledby="home-path">
@@ -407,7 +407,7 @@
       <section class="view" data-route="calculators">
         <div class="wrap">
           <p class="crumbs"><a href="#/home">Home</a> › Calculators</p>
-          <div class="page-head"><h1>Free Financial Calculators</h1><p class="lede">Ten working tools. Every calculator runs entirely in your browser — the numbers you type never leave your device — and every result shows its assumptions. Estimates only; not financial advice.</p></div>
+          <div class="page-head"><h1>Free Financial Calculators</h1><p class="lede">Eleven working tools. Every calculator runs entirely in your browser — the numbers you type never leave your device — and every result shows its assumptions. Estimates only; not financial advice.</p></div>
           <div class="grid c3">
             <div class="card"><h3>Monthly Budget Calculator</h3><p>Income vs. needs, wants and savings, with a 50/30/20 comparison.</p><a class="go" href="#/calculators/budget">Open →</a></div>
             <div class="card"><h3>Savings Goal Calculator</h3><p>When will you reach your goal — or what monthly amount gets you there by a deadline?</p><a class="go" href="#/calculators/savings-goal">Open →</a></div>
@@ -419,6 +419,7 @@
             <div class="card"><h3>Snowball vs. Avalanche</h3><p>Simulate both repayment orders across up to five debts and compare.</p><a class="go" href="#/calculators/snowball-avalanche">Open →</a></div>
             <div class="card"><h3>Inflation Calculator</h3><p>What today's money must grow into — and what cash under the mattress becomes.</p><a class="go" href="#/calculators/inflation">Open →</a></div>
             <div class="card"><h3>Retirement Savings Calculator</h3><p>Project your savings to retirement at a steady return — then see the balance in today's dollars.</p><a class="go" href="#/calculators/retirement">Open →</a></div>
+            <div class="card"><h3>Net Worth Calculator</h3><p>Add up what you own, subtract what you owe, and see your net worth with a debt-to-asset ratio.</p><a class="go" href="#/calculators/net-worth">Open →</a></div>
             <div class="card"><h3>Not sure where to start?</h3><p>Most readers begin with the budget calculator, then the emergency fund target, then a debt payoff date.</p><a class="go" href="#/home">Follow the learning path →</a></div>
           </div>
         </div>
@@ -716,6 +717,60 @@
               <dt>Is this a retirement plan or financial advice?</dt><dd>No. This is an educational projection based only on the numbers and assumptions you enter — it ignores taxes, fees and the order in which real returns arrive, all of which change real outcomes. Retirement decisions deserve a fuller plan; for personalized guidance, consider a licensed financial adviser or a nonprofit counseling service.</dd>
             </dl>
             <div class="assump"><p><strong>Assumptions &amp; limitations:</strong> a constant annual return, compounded monthly, for the whole period, with contributions added at month-end — real investment returns vary year to year, can be negative, and their order matters. The projection ignores taxes, account and fund fees, employer matches, and Social Security or other pension income. The inflation rate is also held constant. Returns are not guaranteed, and this projection is not a promise of any outcome.</p></div>
+            <div class="disclaimer-strip"><strong>Education, not advice.</strong> SteadyCents provides educational content only. Calculator results are estimates based on the assumptions shown and are not guaranteed outcomes. See our full <a href="#/disclaimer">Financial Disclaimer</a>.</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ CALC: NET WORTH ============ -->
+      <section class="view" data-route="calculators/net-worth">
+        <div class="wrap">
+          <p class="crumbs"><a href="#/home">Home</a> › <a href="#/calculators">Calculators</a> › Net Worth</p>
+          <div class="page-head"><h1>Net Worth Calculator</h1><p class="lede">Add up what you own, subtract what you owe. You'll see your total assets, your total liabilities, your net worth, and a debt-to-asset ratio that shows how much of what you own is matched by debt.</p></div>
+          <div class="calc-layout">
+            <form class="calc-form" id="nwForm" novalidate>
+              <div class="field"><label for="cur-nw">Currency</label><select id="cur-nw" class="currency-sel"><option value="USD">USD — US Dollar ($)</option><option value="GBP">GBP — British Pound (£)</option><option value="CAD">CAD — Canadian Dollar ($)</option><option value="AUD">AUD — Australian Dollar ($)</option></select></div>
+              <h3>Assets — what you own</h3>
+              <div class="frow">
+                <div class="field"><label for="nw-cash">Cash and bank accounts</label><input id="nw-cash" type="number" inputmode="decimal" min="0" step="any" value="12000" /><span class="err">Enter 0 or more.</span></div>
+                <div class="field"><label for="nw-retire">Retirement accounts</label><input id="nw-retire" type="number" inputmode="decimal" min="0" step="any" value="45000" /><span class="err">Enter 0 or more.</span></div>
+              </div>
+              <div class="frow">
+                <div class="field"><label for="nw-invest">Other investments</label><input id="nw-invest" type="number" inputmode="decimal" min="0" step="any" value="8000" /><span class="err">Enter 0 or more.</span></div>
+                <div class="field"><label for="nw-home">Home value</label><input id="nw-home" type="number" inputmode="decimal" min="0" step="any" value="240000" /><p class="hint">What it could sell for today — not what you paid for it.</p><span class="err">Enter 0 or more.</span></div>
+              </div>
+              <div class="frow">
+                <div class="field"><label for="nw-vehicle">Vehicle value</label><input id="nw-vehicle" type="number" inputmode="decimal" min="0" step="any" value="15000" /><p class="hint">A current resale estimate for all vehicles you own.</p><span class="err">Enter 0 or more.</span></div>
+                <div class="field"><label for="nw-other-assets">Other assets</label><input id="nw-other-assets" type="number" inputmode="decimal" min="0" step="any" value="2000" /><span class="err">Enter 0 or more.</span></div>
+              </div>
+              <h3>Liabilities — what you owe</h3>
+              <div class="field"><label for="nw-mortgage">Mortgage balance</label><input id="nw-mortgage" type="number" inputmode="decimal" min="0" step="any" value="195000" /><span class="err">Enter 0 or more.</span></div>
+              <div class="frow">
+                <div class="field"><label for="nw-car">Car loan</label><input id="nw-car" type="number" inputmode="decimal" min="0" step="any" value="9000" /><span class="err">Enter 0 or more.</span></div>
+                <div class="field"><label for="nw-cards">Credit card balances</label><input id="nw-cards" type="number" inputmode="decimal" min="0" step="any" value="3500" /><span class="err">Enter 0 or more.</span></div>
+              </div>
+              <div class="frow">
+                <div class="field"><label for="nw-student">Student loans</label><input id="nw-student" type="number" inputmode="decimal" min="0" step="any" value="22000" /><span class="err">Enter 0 or more.</span></div>
+                <div class="field"><label for="nw-other-debts">Other debts</label><input id="nw-other-debts" type="number" inputmode="decimal" min="0" step="any" value="1500" /><span class="err">Enter 0 or more.</span></div>
+              </div>
+              <button class="btn" type="submit">Calculate my net worth</button>
+            </form>
+            <div class="calc-results" id="nwResults" aria-live="polite"><p style="color:var(--muted)">Your results will appear here.</p></div>
+          </div>
+          <article class="body" style="margin-top:30px">
+            <h2>How this calculator works</h2>
+            <p>Net worth is what you own minus what you owe. This calculator adds up the assets you enter — cash and bank accounts, retirement and other investment accounts, your home, your vehicles and anything else of value — then subtracts the liabilities you enter: your mortgage, car loan, credit card balances, student loans and other debts. Use current values throughout: for a home or vehicle, enter what it is worth today, not what you paid for it, and for each debt enter the balance you owe now. The debt-to-asset ratio divides your total liabilities by your total assets, so it shows how much of everything you own is matched by debt. If your total assets are 0, the ratio is shown as —, because there is nothing to divide by.</p>
+            <p><strong>Worked example:</strong> cash and bank accounts of $12,000, retirement accounts of $45,000, other investments of $8,000, a home worth $240,000, a vehicle worth $15,000 and $2,000 of other assets come to <strong>$322,000 in total assets</strong>. Against that sit a mortgage balance of $195,000, a car loan of $9,000, credit card balances of $3,500, student loans of $22,000 and $1,500 of other debts — <strong>$231,000 in total liabilities</strong>. So $322,000 − $231,000 = a net worth of <strong>$91,000</strong>, and the debt-to-asset ratio is <strong>71.7%</strong> ($231,000 ÷ $322,000). This example is an illustration built from round figures so the arithmetic is easy to check — it is not a picture of a typical household.</p>
+            <p>Net worth is the snapshot; other tools here work on the flows and balances that move it. The <a href="#/calculators/budget">Monthly Budget Calculator</a> shows the month-to-month flow that gradually shifts this number, the <a href="#/calculators/debt-payoff">Debt Payoff Calculator</a> works on the liability side one balance at a time, the <a href="#/calculators/savings-goal">Savings Goal Calculator</a> builds the asset side toward a chosen target, and the <a href="#/calculators/retirement">Retirement Savings Calculator</a> projects the retirement accounts that sit inside your assets here.</p>
+            <h2>Frequently asked questions</h2>
+            <dl class="faq">
+              <dt>What is net worth?</dt><dd>Net worth is what you own minus what you owe. Add up the current value of your assets — cash and bank accounts, retirement and other investment accounts, your home, your vehicles and anything else of value — then subtract everything you still owe, such as a mortgage, a car loan, credit card balances and student loans. The result is a single number that snapshots where you stand today.</dd>
+              <dt>Is a negative net worth bad?</dt><dd>Not necessarily, and it is not a judgment of you. A negative net worth simply means the balances you owe currently total more than the current value of what you own. It can happen, for example, soon after taking on student loans or a first mortgage, before years of payments have brought those balances down. What matters most is the direction over time: a net worth that rises as balances fall and savings build is moving the right way, and recalculating regularly shows whether it is heading where you want.</dd>
+              <dt>Should I use my home's purchase price or its current value?</dt><dd>Use its current value — a realistic estimate of what the home could sell for today — not the price you paid for it. Net worth is a snapshot of today, so every item should be valued as it stands now, and the same applies to vehicles and other assets: use a current resale estimate rather than the purchase price. If you are unsure, choose the more cautious estimate: an inflated value flatters the result without changing your real position.</dd>
+              <dt>How often should I recalculate my net worth?</dt><dd>Every three to six months is a practical rhythm for most households. That is often enough for saving and debt payments to show up as real movement, without chasing short-term swings in home values or account balances. It also helps to recalculate after a major change — paying off a loan in full, buying or selling a home, or a large change in savings — and to use the same categories each time, so each new snapshot is comparable with the last.</dd>
+              <dt>Is net worth the same as wealth, and is this financial advice?</dt><dd>No to both. Net worth is a single snapshot number — what you own minus what you owe today — while wealth in everyday life also rests on things no calculator can count, such as your future income, health, skills and time. And this calculator is educational only, not financial advice: it works solely from the values you enter, excludes anything you have not entered, and knows nothing about your taxes, goals or circumstances. For decisions about your own situation, consider a licensed financial adviser or a nonprofit counseling service.</dd>
+            </dl>
+            <div class="assump"><p><strong>Assumptions &amp; limitations:</strong> the figures are a point-in-time snapshot built only from the values you enter. Home and vehicle values change over time and are estimates — use current values, not purchase prices. Debt balances are what you owe now, not the total of future payments. Future income, taxes and fees are excluded, as are any pension or Social Security entitlements you have not entered as an asset. Results are estimates for education, not financial advice.</p></div>
             <div class="disclaimer-strip"><strong>Education, not advice.</strong> SteadyCents provides educational content only. Calculator results are estimates based on the assumptions shown and are not guaranteed outcomes. See our full <a href="#/disclaimer">Financial Disclaimer</a>.</div>
           </article>
         </div>
@@ -1774,10 +1829,11 @@
           <p class="crumbs"><a href="#/home">Home</a> › Editorial Plan &amp; Site Status</p>
           <div class="page-head"><h1>Editorial Plan &amp; Site Status</h1><p class="lede">Published openly, because a finance site should model the transparency it teaches. This page tracks the 90-day content plan and the honest state of monetization and analytics setup.</p></div>
 
-          <section class="block"><h2>Site status — October 31, 2026</h2>
+          <section class="block"><h2>Site status — November 2, 2026</h2>
             <div class="card">
               <ul class="check-list">
-                <li>Foundation published: home, four topic hubs, US country hub, 10 working calculators, full trust &amp; legal pages — 16 guide pages live in total (15 full guides plus the glossary), including the two October 20 additions below.</li>
+                <li>Foundation published: home, four topic hubs, US country hub, 11 working calculators, full trust &amp; legal pages — 16 guide pages live in total (15 full guides plus the glossary), including the two October 20 additions below.</li>
+                <li>New calculator published November 2, 2026: <a href="#/calculators/net-worth">"Net Worth Calculator"</a> — total assets minus total liabilities, with a debt-to-asset ratio and a plain-language reading, the site's eleventh calculator.</li>
                 <li>New calculator published October 26, 2026: <a href="#/calculators/retirement">"Retirement Savings Calculator"</a> — projected balance at retirement with monthly compounding, total contributions vs. growth, and an inflation-adjusted figure in today's dollars, the site's tenth calculator.</li>
                 <li>New guide published October 31, 2026: <a href="#/guides/checking-vs-savings">"Checking vs. Savings Accounts, Explained"</a> — the fifth guide of the Days 31–60 phase, completing the phase's planned guide list.</li>
                 <li>New guide published October 29, 2026: <a href="#/guides/negotiate-bills">"How to Negotiate Bills Without the Dread"</a> — the fourth guide of the Days 31–60 phase.</li>
@@ -1788,7 +1844,7 @@
                 <li>Days 31–60 phase underway: first guide published October 20, 2026 — "How to Build Credit From Scratch (United States)"; second guide published October 24, 2026 — "Sinking Funds: The Budget Line That Ends Surprise Bills"; third guide published October 27, 2026 — "Biweekly vs. Monthly Payments: What Actually Saves Money"; fourth guide published October 29, 2026 — "How to Negotiate Bills Without the Dread"; fifth guide published October 31, 2026 — "Checking vs. Savings Accounts, Explained".</li>
                 <li>Timely addition published October 20, 2026: <a href="#/guides/fed-decision-october-2026">"Fed Decision on October 28: What a Hold or a Quarter-Point Hike Could Mean for Your Savings, Credit Cards, and Mortgage"</a> — a scenario guide for the October 27–28 FOMC meeting, to be updated after the announcement.</li>
                 <li>Calculators run 100% locally in the browser; no personal data is transmitted or stored.</li>
-                <li>SEO basics in place: unique titles and meta descriptions on every page (all 45 routes), one clear search intent per page, semantic headings, descriptive internal links, structured data for the site (WebSite and Organization site-wide; FAQ schema only on the guides that show those questions), a canonical tag, and Open Graph tags that follow each page's title and description.</li>
+                <li>SEO basics in place: unique titles and meta descriptions on every page (all 46 routes), one clear search intent per page, semantic headings, descriptive internal links, structured data for the site (WebSite and Organization site-wide; FAQ schema only on the guides that show those questions), a canonical tag, and Open Graph tags that follow each page's title and description.</li>
                 <li class="todo">Google Search Console &amp; Analytics: <strong>not yet connected</strong> — requires the site owner to verify ownership under their own Google account.</li>
                 <li class="todo">Google AdSense: <strong>not applied for</strong> — application is the owner's decision; readiness audit below shows what remains.</li>
                 <li class="todo">Custom domain: <strong>not purchased</strong> (zero-budget rule) — the site currently runs on its free publishing address.</li>
@@ -1965,6 +2021,7 @@
         "calculators/snowball-avalanche":"Debt Snowball vs Avalanche Calculator | SteadyCents",
         "calculators/inflation":"Inflation Calculator | SteadyCents",
         "calculators/retirement":"Retirement Savings Calculator | SteadyCents",
+        "calculators/net-worth":"Net Worth Calculator | SteadyCents",
         "guides":"Personal Finance Guides | SteadyCents",
         "guides/how-to-make-a-monthly-budget":"How to Make a Monthly Budget That Actually Sticks | SteadyCents",
         "guides/50-30-20-rule":"The 50/30/20 Rule, Explained | SteadyCents",
@@ -2012,6 +2069,7 @@
         "calculators/snowball-avalanche":"Free snowball vs. avalanche calculator: enter up to five debts and compare both payoff orders by debt-free date and total interest, side by side.",
         "calculators/inflation":"Free inflation calculator: see what today's money must grow into to buy the same things later, and what idle cash quietly loses over time.",
         "calculators/retirement":"Free retirement savings calculator: project your balance at retirement from your age, current savings and monthly contributions — with growth split out and a figure in today's dollars.",
+        "calculators/net-worth":"Free net worth calculator: add up what you own, subtract what you owe, and see your net worth — with a debt-to-asset ratio and a plain-language reading.",
         "guides":"Plain-language personal finance guides with worked examples: budgeting, saving, debt and credit — each labeled by country, sourced and dated.",
         "guides/how-to-make-a-monthly-budget":"How to make a monthly budget that sticks: find your real take-home pay, list true expenses, give savings a line, and review in 15 minutes a month.",
         "guides/50-30-20-rule":"The 50/30/20 rule explained: what the needs, wants and savings split gets right, where it breaks in high-cost areas, and how to bend it honestly.",
@@ -2099,6 +2157,13 @@
           {"@type":"Question","name":"What does the \"today's dollars\" figure mean?","acceptedAnswer":{"@type":"Answer","text":"It restates the projected balance in current purchasing power by dividing it by (1 + inflation) raised to the years until retirement. A million dollars in 35 years sounds large, but at 3% inflation it buys roughly what $360,923 buys today — the today's-dollars figure is the one to compare with your current spending."}},
           {"@type":"Question","name":"Does this include Social Security, a pension or an employer match?","acceptedAnswer":{"@type":"Answer","text":"No. The projection covers only the savings and contributions you enter. Social Security or state pension income, employer matching contributions, and other income sources would all add to the picture — if your employer matches contributions, include the matched amount in your monthly contribution to see its effect."}},
           {"@type":"Question","name":"Is this a retirement plan or financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational projection based only on the numbers and assumptions you enter — it ignores taxes, fees and the order in which real returns arrive, all of which change real outcomes. Retirement decisions deserve a fuller plan; for personalized guidance, consider a licensed financial adviser or a nonprofit counseling service."}}
+        ]},
+        "calculators/net-worth":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"What is net worth?","acceptedAnswer":{"@type":"Answer","text":"Net worth is what you own minus what you owe. Add up the current value of your assets — cash and bank accounts, retirement and other investment accounts, your home, your vehicles and anything else of value — then subtract everything you still owe, such as a mortgage, a car loan, credit card balances and student loans. The result is a single number that snapshots where you stand today."}},
+          {"@type":"Question","name":"Is a negative net worth bad?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily, and it is not a judgment of you. A negative net worth simply means the balances you owe currently total more than the current value of what you own. It can happen, for example, soon after taking on student loans or a first mortgage, before years of payments have brought those balances down. What matters most is the direction over time: a net worth that rises as balances fall and savings build is moving the right way, and recalculating regularly shows whether it is heading where you want."}},
+          {"@type":"Question","name":"Should I use my home's purchase price or its current value?","acceptedAnswer":{"@type":"Answer","text":"Use its current value — a realistic estimate of what the home could sell for today — not the price you paid for it. Net worth is a snapshot of today, so every item should be valued as it stands now, and the same applies to vehicles and other assets: use a current resale estimate rather than the purchase price. If you are unsure, choose the more cautious estimate: an inflated value flatters the result without changing your real position."}},
+          {"@type":"Question","name":"How often should I recalculate my net worth?","acceptedAnswer":{"@type":"Answer","text":"Every three to six months is a practical rhythm for most households. That is often enough for saving and debt payments to show up as real movement, without chasing short-term swings in home values or account balances. It also helps to recalculate after a major change — paying off a loan in full, buying or selling a home, or a large change in savings — and to use the same categories each time, so each new snapshot is comparable with the last."}},
+          {"@type":"Question","name":"Is net worth the same as wealth, and is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No to both. Net worth is a single snapshot number — what you own minus what you owe today — while wealth in everyday life also rests on things no calculator can count, such as your future income, health, skills and time. And this calculator is educational only, not financial advice: it works solely from the values you enter, excludes anything you have not entered, and knows nothing about your taxes, goals or circumstances. For decisions about your own situation, consider a licensed financial adviser or a nonprofit counseling service."}}
         ]},
         "guides/needs-vs-wants":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
           {"@type":"Question","name":"Is eating out a need or a want?","acceptedAnswer":{"@type":"Answer","text":"A want. Food is a need, but meals you could make at home are optional — that is why this guide rules coffee out and restaurant meals as wants: pleasant and often worth budgeting for, just labeled honestly."}},
@@ -2577,6 +2642,32 @@
           '<p style="color:var(--muted);font-size:.9rem">Constant '+rate+'% return compounded monthly, contributions at month end, before taxes and fees. Real returns vary and are not guaranteed — see the assumptions below, and try the <a href="#/calculators/compound-interest">compound interest calculator</a> for a year-by-year view.</p>';
       }
       $("retForm").addEventListener("submit", calcRet);
+
+      /* ---------- NET WORTH ---------- */
+      function calcNW(e){
+        if (e) e.preventDefault();
+        var assetIds = ["nw-cash","nw-retire","nw-invest","nw-home","nw-vehicle","nw-other-assets"];
+        var liabIds = ["nw-mortgage","nw-car","nw-cards","nw-student","nw-other-debts"];
+        var assets = 0, liabs = 0, ok = true;
+        assetIds.forEach(function(id){ var v = validate($(id), function(x){return x>=0;}); if (isNaN(v)) ok = false; else assets += v; });
+        liabIds.forEach(function(id){ var v = validate($(id), function(x){return x>=0;}); if (isNaN(v)) ok = false; else liabs += v; });
+        var out = $("nwResults");
+        if (!ok){ out.innerHTML = '<div class="warnbox"><p style="margin:0"><strong>Check the highlighted fields</strong> and try again.</p></div>'; return; }
+        var nw = assets - liabs;
+        var reading = nw > 0
+          ? 'That is a positive net worth: you own more than you owe.'
+          : nw < 0
+            ? 'That is a negative net worth: you owe more than you own.'
+            : 'Your assets and debts exactly balance — your net worth is zero.';
+        out.innerHTML =
+          '<p style="margin-bottom:2px;color:var(--muted)">Your net worth (what you own − what you owe)</p><div class="result-big">'+fmt(nw,currency)+'</div>'+
+          '<p>'+reading+'</p>'+
+          '<div class="result-row"><span>Total assets</span><b>'+fmt(assets,currency)+'</b></div>'+
+          '<div class="result-row"><span>Total liabilities</span><b>'+fmt(liabs,currency)+'</b></div>'+
+          '<div class="result-row"><span>Debt-to-asset ratio</span><b>'+(assets>0 ? (liabs/assets*100).toFixed(1)+'%' : '—')+'</b></div>'+
+          '<p style="color:var(--muted);font-size:.9rem">A snapshot from the values you entered today — home and vehicle values change, and balances move as you pay and save. See the assumptions below.</p>';
+      }
+      $("nwForm").addEventListener("submit", calcNW);
 
       /* ---------- CONTACT DRAFT COPY ---------- */
       $("contactForm").addEventListener("submit", function(e){
