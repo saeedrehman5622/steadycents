@@ -236,7 +236,7 @@
               <div class="card"><h3>Compound Interest Calculator</h3><p>Watch regular saving grow over time, with a year-by-year chart and a clear split between your money and interest earned.</p><a class="go" href="#/calculators/compound-interest">See growth over time →</a></div>
               <div class="card"><h3>Emergency Fund Calculator</h3><p>Work out how many months of essential expenses to hold, your target amount, and how long it will take to get there.</p><a class="go" href="#/calculators/emergency-fund">Find my target →</a></div>
             </div>
-            <p style="margin-top:16px"><a href="#/calculators">See all eleven calculators</a>, including savings goals, loan payments, mortgages, snowball vs. avalanche and inflation.</p>
+            <p style="margin-top:16px"><a href="#/calculators">See all twelve calculators</a>, including savings goals, loan payments, mortgages, snowball vs. avalanche and inflation.</p>
           </section>
 
           <section class="block" aria-labelledby="home-path">
@@ -409,13 +409,14 @@
       <section class="view" data-route="calculators">
         <div class="wrap">
           <p class="crumbs"><a href="#/home">Home</a> › Calculators</p>
-          <div class="page-head"><h1>Free Financial Calculators</h1><p class="lede">Eleven working tools. Every calculator runs entirely in your browser — the numbers you type never leave your device — and every result shows its assumptions. Estimates only; not financial advice.</p></div>
+          <div class="page-head"><h1>Free Financial Calculators</h1><p class="lede">Twelve working tools. Every calculator runs entirely in your browser — the numbers you type never leave your device — and every result shows its assumptions. Estimates only; not financial advice.</p></div>
           <div class="grid c3">
             <div class="card"><h3>Monthly Budget Calculator</h3><p>Income vs. needs, wants and savings, with a 50/30/20 comparison.</p><a class="go" href="#/calculators/budget">Open →</a></div>
             <div class="card"><h3>Savings Goal Calculator</h3><p>When will you reach your goal — or what monthly amount gets you there by a deadline?</p><a class="go" href="#/calculators/savings-goal">Open →</a></div>
             <div class="card"><h3>Compound Interest Calculator</h3><p>Growth of a lump sum plus monthly deposits, year by year.</p><a class="go" href="#/calculators/compound-interest">Open →</a></div>
             <div class="card"><h3>Emergency Fund Calculator</h3><p>Your target cushion in months of essential expenses, and the road to fund it.</p><a class="go" href="#/calculators/emergency-fund">Open →</a></div>
             <div class="card"><h3>Debt Payoff Calculator</h3><p>Payoff date, total interest, and the effect of one extra payment amount.</p><a class="go" href="#/calculators/debt-payoff">Open →</a></div>
+            <div class="card"><h3>Credit Card Payoff Calculator</h3><p>Payoff date and total interest for a fixed monthly card payment — plus what paying only the minimum would cost.</p><a class="go" href="#/calculators/credit-card-payoff">Open →</a></div>
             <div class="card"><h3>Loan Payment Calculator</h3><p>Monthly payment, total interest and total cost for a fixed-rate loan.</p><a class="go" href="#/calculators/loan-payment">Open →</a></div>
             <div class="card"><h3>Mortgage Payment Calculator</h3><p>Monthly P&amp;I, PITI, amortization, extra-payment savings.</p><a class="go" href="#/calculators/mortgage-payment">Open →</a></div>
             <div class="card"><h3>Snowball vs. Avalanche</h3><p>Simulate both repayment orders across up to five debts and compare.</p><a class="go" href="#/calculators/snowball-avalanche">Open →</a></div>
@@ -566,8 +567,44 @@
           </div>
           <article class="body" style="margin-top:30px">
             <h2>Why the payment size matters so much</h2>
-            <p>Each month, interest is charged on what you still owe. A payment only slightly above the monthly interest shrinks the balance painfully slowly — and if a payment is below the month's interest, the balance grows even while you pay. This calculator applies your payment month by month so you can see the true timeline. Background: <a href="#/guides/how-credit-card-interest-works">How Credit Card Interest Actually Works</a>. The same extra-payment logic drives biweekly loan and mortgage schedules — see <a href="#/guides/biweekly-vs-monthly-payments">Biweekly vs. Monthly Payments: What Actually Saves Money</a> for what one extra payment a year does to a mortgage. You can also attack the APR itself: <a href="#/guides/negotiate-bills">How to Negotiate Bills Without the Dread</a> explains how to ask your card company for a lower rate yourself — and why any company that charges upfront to do it for you is showing a scam sign.</p>
+            <p>Each month, interest is charged on what you still owe. A payment only slightly above the monthly interest shrinks the balance painfully slowly — and if a payment is below the month's interest, the balance grows even while you pay. This calculator applies your payment month by month so you can see the true timeline. Background: <a href="#/guides/how-credit-card-interest-works">How Credit Card Interest Actually Works</a>. The same extra-payment logic drives biweekly loan and mortgage schedules — see <a href="#/guides/biweekly-vs-monthly-payments">Biweekly vs. Monthly Payments: What Actually Saves Money</a> for what one extra payment a year does to a mortgage. You can also attack the APR itself: <a href="#/guides/negotiate-bills">How to Negotiate Bills Without the Dread</a> explains how to ask your card company for a lower rate yourself — and why any company that charges upfront to do it for you is showing a scam sign. If the debt is a single credit card and you want to see what paying only the minimum would cost alongside your fixed payment, the <a href="#/calculators/credit-card-payoff">Credit Card Payoff Calculator</a> shows both side by side.</p>
             <div class="assump"><p><strong>Assumptions &amp; limits:</strong> fixed APR, same payment every month, no new charges, fees or penalty rates, payments at month end. Real cards calculate interest on average daily balances, so treat results as close estimates. Minimum payments on real cards usually shrink as the balance falls, which stretches payoff far longer than a fixed payment.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ CALC: CREDIT CARD PAYOFF ============ -->
+      <section class="view" data-route="calculators/credit-card-payoff">
+        <div class="wrap">
+          <p class="crumbs"><a href="#/home">Home</a> › <a href="#/calculators">Calculators</a> › Credit Card Payoff</p>
+          <div class="page-head"><h1>Credit Card Payoff Calculator</h1><p class="lede">Enter your card balance, its APR and the fixed amount you can pay every month. You'll see your payoff date, the total interest and the total you'll pay — plus what the same balance would cost if you paid only the minimum each month.</p></div>
+          <div class="calc-layout">
+            <form class="calc-form" id="ccForm" novalidate>
+              <div class="field"><label for="cur-cc">Currency</label><select id="cur-cc" class="currency-sel"><option value="USD">USD — US Dollar ($)</option><option value="GBP">GBP — British Pound (£)</option><option value="CAD">CAD — Canadian Dollar ($)</option><option value="AUD">AUD — Australian Dollar ($)</option></select></div>
+              <div class="field"><label for="cc-balance">Card balance</label><input id="cc-balance" type="number" inputmode="decimal" min="0" step="any" value="5000" /><span class="err">Enter a balance above 0.</span></div>
+              <div class="field"><label for="cc-apr">APR (%)</label><input id="cc-apr" type="number" inputmode="decimal" min="0" max="60" step="any" value="22.99" /><span class="err">Enter an APR above 0 and up to 60.</span></div>
+              <div class="field"><label for="cc-payment">Fixed monthly payment</label><input id="cc-payment" type="number" inputmode="decimal" min="0" step="any" value="200" /><p class="hint">The same amount every month — not the minimum shown on your statement, which shrinks as your balance falls.</p><span class="err">Enter a payment above 0.</span></div>
+              <button class="btn" type="submit">Find my payoff date</button>
+            </form>
+            <div class="calc-results" id="ccResults" aria-live="polite"><p style="color:var(--muted)">Your results will appear here.</p></div>
+          </div>
+          <article class="body" style="margin-top:30px">
+            <h2>How this calculator works</h2>
+            <p>It works through your balance month by month. Each month, interest is charged at your APR divided by 12 on the balance you still owe, then your fixed payment is subtracted. Because the payment never shrinks, more and more of it reaches the balance itself as the interest portion falls — the opposite of a minimum payment, which gets smaller as you succeed. The simulation stops when the balance reaches zero; the final month's payment is smaller, covering only what is left plus that month's interest.</p>
+            <p><strong>Worked example:</strong> a <strong>$5,000 balance at 22.99% APR</strong> with a fixed payment of <strong>$200 a month</strong> is paid off in <strong>35 months</strong>, with <strong>$1,871.08 in total interest</strong> and <strong>$6,871.08 paid in total</strong>. Pay only the minimum instead (using the illustrative formula below) and the same balance takes <strong>229 months</strong> and costs <strong>$8,339.53 in interest</strong> — so the fixed payment saves <strong>$6,468.46 in interest</strong> and clears the card <strong>194 months sooner</strong>.</p>
+            <h2>The minimum-payment comparison</h2>
+            <p>The comparison uses one clearly labelled <strong>illustrative formula</strong>: each month, the payment is that month's interest plus 1% of the balance after that interest is added, with a <strong>$25 floor</strong>. Real issuers use different minimum-payment formulas — some use a different percentage, some add fees, and some charge a flat percentage of the balance — so this comparison is illustrative, not a quote from any card issuer. Your own card's formula is in its cardholder agreement. What every shrinking minimum shares is the shape of the problem: the payment falls as the balance falls, so the payoff stretches out for years.</p>
+            <p>For the mechanics behind the numbers — APR, average daily balance and how the grace period is lost — read <a href="#/guides/how-credit-card-interest-works">How Credit Card Interest Actually Works</a>. If your balance is a loan rather than a card, or you want to test one extra payment on top of your regular one, the <a href="#/calculators/debt-payoff">Debt Payoff Calculator</a> covers any single debt the same way. And if this card is one of several debts, the <a href="#/calculators/snowball-avalanche">Snowball vs. Avalanche Calculator</a> compares the order to attack them in.</p>
+            <h2>Frequently asked questions</h2>
+            <dl class="faq">
+              <dt>How does this calculator work?</dt><dd>It applies your fixed monthly payment to your balance month by month. Each month, interest is charged at your APR divided by 12 on the balance you still owe, then your payment is subtracted. It repeats until the balance reaches zero and reports the number of months, the total interest, the total you paid and the month you become debt-free.</dd>
+              <dt>How is the minimum-payment comparison calculated?</dt><dd>The comparison uses one illustrative formula: each month, the payment is that month's interest plus 1% of the balance after that interest is added, with a $25 floor. Real card issuers use different minimum-payment formulas — some use a different percentage, some add fees, and some charge a flat percentage of the balance — so treat this comparison as an illustration of how minimum payments behave, not as a quote from your card issuer.</dd>
+              <dt>Why does paying only the minimum take so much longer?</dt><dd>Because the minimum payment falls as your balance falls. At first, most of it is interest plus a small slice of the balance, and as the balance shrinks the payment shrinks with it, so progress slows. A fixed payment stays the same every month, so more and more of it reaches the balance itself — which is why the fixed payment clears the same debt years sooner and for far less interest.</dd>
+              <dt>What if my fixed payment does not cover the monthly interest?</dt><dd>Then the balance will not fall. If your payment is less than or equal to the first month's interest, everything you pay is swallowed by interest and the amount you owe stays the same or grows, so the calculator flags it instead of showing a payoff date. To make progress, the payment must be higher than the monthly interest — on the default example, the first month's interest is about $95.79.</dd>
+              <dt>Is this calculator financial advice?</dt><dd>No. It is an educational estimate based only on the numbers you enter and the assumptions shown on this page — a constant APR, no new purchases, no fees or penalty rates, and payments at month end. Your card's real figures will differ, because issuers calculate interest on average daily balances. For advice about your own situation, consider a nonprofit credit counselor or a licensed financial adviser.</dd>
+            </dl>
+            <div class="assump"><p><strong>Assumptions &amp; limitations:</strong> a constant APR for the whole payoff — no rate changes and no penalty rates. No new purchases, cash advances, fees or other charges are added to the balance. Payments are made at month end, and interest is charged monthly at the APR divided by 12; real cards charge interest on average daily balances, so treat every figure as a close estimate, not an exact quote. The minimum-payment comparison uses one illustrative formula (that month's interest plus 1% of the balance, with a $25 floor); real issuers use different minimum-payment formulas. Education only — this calculator is not financial advice.</p></div>
+            <div class="disclaimer-strip"><strong>Education, not advice.</strong> SteadyCents provides educational content only. Calculator results are estimates based on the assumptions shown and are not guaranteed outcomes. See our full <a href="#/disclaimer">Financial Disclaimer</a>.</div>
           </article>
         </div>
       </section>
@@ -613,7 +650,7 @@
           </div>
           <article class="body" style="margin-top:30px">
             <h2>Which method should you choose?</h2>
-            <p>The avalanche is never worse on pure math; the snowball sometimes wins on follow-through because an early "debt gone" moment keeps people going. The interest difference is often smaller than people expect — run your real numbers above, then read <a href="#/guides/debt-snowball-vs-avalanche">our full comparison guide</a> before deciding.</p>
+            <p>The avalanche is never worse on pure math; the snowball sometimes wins on follow-through because an early "debt gone" moment keeps people going. The interest difference is often smaller than people expect — run your real numbers above, then read <a href="#/guides/debt-snowball-vs-avalanche">our full comparison guide</a> before deciding. Focusing on one card first? The <a href="#/calculators/credit-card-payoff">Credit Card Payoff Calculator</a> shows what a fixed payment on that card achieves — and what paying only its minimum would cost.</p>
             <div class="assump"><p><strong>Assumptions &amp; limits:</strong> fixed APRs, minimums paid on time every month, freed-up minimums roll into the target debt, no new charges or fees. If a minimum payment is below a debt's monthly interest, that debt can never be repaid on minimums alone — the calculator flags this.</p></div>
           </article>
         </div>
@@ -1060,7 +1097,7 @@
             <p>If you pay your full statement balance by the due date, most cards charge no interest on new purchases — that's the grace period. But carry even a small balance past the due date and the grace period typically disappears: new purchases start accruing interest from the day they're made until you pay the balance in full again (sometimes for two cycles). This is the least understood — and most expensive — card mechanic.</p>
             <h2>The minimum-payment trap, in numbers</h2>
             <p>Many issuers set the minimum at the month's interest plus about 1% of the balance (with a floor, often $25). On a <strong>$3,000 balance at 24% APR</strong>, paying only that shrinking minimum takes about <strong>181 months — roughly 15 years</strong> — and costs about <strong>$4,802 in interest</strong>: more than the original $3,000. Pay a fixed <strong>$100 a month</strong> instead and the same debt clears in <strong>47 months</strong> at about <strong>$1,627</strong> interest. (Simulated month by month; your card's exact minimum formula is in its cardholder agreement.)</p>
-            <div class="example"><div class="ex-t">The takeaway</div><p style="margin:0">A fixed payment you choose beats a minimum that shrinks as you succeed. Set your own fixed amount — even slightly above today's minimum — and let the falling balance work for you, not against you. Model your card in the <a href="#/calculators/debt-payoff">Debt Payoff Calculator</a>.</p></div>
+            <div class="example"><div class="ex-t">The takeaway</div><p style="margin:0">A fixed payment you choose beats a minimum that shrinks as you succeed. Set your own fixed amount — even slightly above today's minimum — and let the falling balance work for you, not against you. Model your card in the <a href="#/calculators/debt-payoff">Debt Payoff Calculator</a>. For a card-only view that also compares a fixed payment with paying only the minimum, try the <a href="#/calculators/credit-card-payoff">Credit Card Payoff Calculator</a>.</p></div>
             <h2>Frequently asked questions</h2>
             <dl class="faq">
               <dt>Why did my interest charge go up when my balance went down?</dt><dd>Interest is charged in arrears on the previous cycle's average daily balance — and if you lost your grace period, new purchases accrue from day one. The charge reflects last month's balances, not today's.</dd>
@@ -1903,11 +1940,12 @@
           <p class="crumbs"><a href="#/home">Home</a> › Editorial Plan &amp; Site Status</p>
           <div class="page-head"><h1>Editorial Plan &amp; Site Status</h1><p class="lede">Published openly, because a finance site should model the transparency it teaches. This page tracks the 90-day content plan and the honest state of monetization and analytics setup.</p></div>
 
-          <section class="block"><h2>Site status — November 3, 2026</h2>
+          <section class="block"><h2>Site status — November 5, 2026</h2>
             <div class="card">
               <ul class="check-list">
-                <li>Foundation published: home, four topic hubs, US country hub, 11 working calculators, full trust &amp; legal pages — 17 guide pages live in total (16 full guides plus the glossary), including the two October 20 additions below.</li>
-                <li>New guide published November 3, 2026: <a href="#/guides/high-yield-savings-account">"How to Choose a High-Yield Savings Account"</a> — the first guide published after the Days 31–60 phase's planned list was completed, taking the site to 17 guide pages (16 full guides plus the glossary) and 47 routes in total.</li>
+                <li>Foundation published: home, four topic hubs, US country hub, 12 working calculators, full trust &amp; legal pages — 17 guide pages live in total (16 full guides plus the glossary), including the two October 20 additions below.</li>
+                <li>New calculator published November 5, 2026: <a href="#/calculators/credit-card-payoff">"Credit Card Payoff Calculator"</a> — payoff date, total interest and total paid for a fixed monthly card payment, with an illustrative minimum-payment comparison and the interest it saves, the site's twelfth calculator — taking the site to 48 routes in total.</li>
+                <li>New guide published November 3, 2026: <a href="#/guides/high-yield-savings-account">"How to Choose a High-Yield Savings Account"</a> — the first guide published after the Days 31–60 phase's planned list was completed, taking the site to 17 guide pages (16 full guides plus the glossary) and 48 routes in total.</li>
                 <li>New calculator published November 2, 2026: <a href="#/calculators/net-worth">"Net Worth Calculator"</a> — total assets minus total liabilities, with a debt-to-asset ratio and a plain-language reading, the site's eleventh calculator.</li>
                 <li>New calculator published October 26, 2026: <a href="#/calculators/retirement">"Retirement Savings Calculator"</a> — projected balance at retirement with monthly compounding, total contributions vs. growth, and an inflation-adjusted figure in today's dollars, the site's tenth calculator.</li>
                 <li>New guide published October 31, 2026: <a href="#/guides/checking-vs-savings">"Checking vs. Savings Accounts, Explained"</a> — the fifth guide of the Days 31–60 phase, completing the phase's planned guide list.</li>
@@ -1919,7 +1957,7 @@
                 <li>Days 31–60 phase underway: first guide published October 20, 2026 — "How to Build Credit From Scratch (United States)"; second guide published October 24, 2026 — "Sinking Funds: The Budget Line That Ends Surprise Bills"; third guide published October 27, 2026 — "Biweekly vs. Monthly Payments: What Actually Saves Money"; fourth guide published October 29, 2026 — "How to Negotiate Bills Without the Dread"; fifth guide published October 31, 2026 — "Checking vs. Savings Accounts, Explained".</li>
                 <li>Timely addition published October 20, 2026: <a href="#/guides/fed-decision-october-2026">"Fed Decision on October 28: What a Hold or a Quarter-Point Hike Could Mean for Your Savings, Credit Cards, and Mortgage"</a> — a scenario guide for the October 27–28 FOMC meeting, to be updated after the announcement.</li>
                 <li>Calculators run 100% locally in the browser; no personal data is transmitted or stored.</li>
-                <li>SEO basics in place: unique titles and meta descriptions on every page (all 47 routes), one clear search intent per page, semantic headings, descriptive internal links, structured data for the site (WebSite and Organization site-wide; FAQ schema only on the guides that show those questions), a canonical tag, and Open Graph tags that follow each page's title and description.</li>
+                <li>SEO basics in place: unique titles and meta descriptions on every page (all 48 routes), one clear search intent per page, semantic headings, descriptive internal links, structured data for the site (WebSite and Organization site-wide; FAQ schema only on the guides that show those questions), a canonical tag, and Open Graph tags that follow each page's title and description.</li>
                 <li class="todo">Google Search Console &amp; Analytics: <strong>not yet connected</strong> — requires the site owner to verify ownership under their own Google account.</li>
                 <li class="todo">Google AdSense: <strong>not applied for</strong> — application is the owner's decision; readiness audit below shows what remains.</li>
                 <li class="todo">Custom domain: <strong>not purchased</strong> (zero-budget rule) — the site currently runs on its free publishing address.</li>
@@ -1948,7 +1986,7 @@
               <h3>Days 1–30 — US foundation (live)</h3>
               <ul>
                 <li>Launch set: budget method, 50/30/20, needs vs. wants, emergency funds, compound interest, snowball vs. avalanche, credit card interest, US credit scores, US free credit reports, glossary.</li>
-                <li>All eleven calculators live with assumptions and limitations stated (the ninth, the Mortgage Payment Calculator, was added October 22, 2026, the tenth, the Retirement Savings Calculator, on October 26, 2026 — both in the Days 31–60 phase — and the eleventh, the Net Worth Calculator, on November 2, 2026).</li>
+                <li>All twelve calculators live with assumptions and limitations stated (the ninth, the Mortgage Payment Calculator, was added October 22, 2026, the tenth, the Retirement Savings Calculator, on October 26, 2026 — both in the Days 31–60 phase — the eleventh, the Net Worth Calculator, on November 2, 2026, and the twelfth, the Credit Card Payoff Calculator, on November 5, 2026).</li>
               </ul>
               <h3>Days 31–60 — depth in the US clusters</h3>
               <ul>
@@ -2091,6 +2129,7 @@
         "calculators/compound-interest":"Compound Interest Calculator | SteadyCents",
         "calculators/emergency-fund":"Emergency Fund Calculator | SteadyCents",
         "calculators/debt-payoff":"Debt Payoff Calculator | SteadyCents",
+        "calculators/credit-card-payoff":"Credit Card Payoff Calculator | SteadyCents",
         "calculators/loan-payment":"Loan Payment Calculator | SteadyCents",
         "calculators/mortgage-payment":"Mortgage Payment Calculator | SteadyCents",
         "calculators/snowball-avalanche":"Debt Snowball vs Avalanche Calculator | SteadyCents",
@@ -2134,12 +2173,13 @@
         "saving":"Saving money guides and calculators: emergency fund targets, savings goals and compound interest explained, with systems that work on real incomes.",
         "debt":"Debt education without shame: snowball vs. avalanche payoff strategies, how credit card interest really works, and calculators to run your own numbers.",
         "credit":"Credit education, country by country: US credit scores and reports explained, how to check your reports free, and how to build credit from scratch.",
-        "calculators":"Eleven free calculators, private in your browser: budget, savings goal, compound interest, emergency fund, debt payoff, loans, mortgages, retirement, net worth.",
+        "calculators":"Twelve free calculators, private in your browser: budget, savings goal, compound interest, emergency fund, debt payoff, loans, mortgages, retirement, net worth.",
         "calculators/budget":"Free monthly budget calculator: enter take-home pay and spending to see your needs, wants and savings split compared with the 50/30/20 guideline.",
         "calculators/savings-goal":"Free savings goal calculator: see when your monthly saving reaches your goal, or the monthly amount needed to hit a deadline. Estimates, shown openly.",
         "calculators/compound-interest":"Free compound interest calculator: see how a starting amount plus monthly deposits could grow over time, split into your money and interest earned.",
         "calculators/emergency-fund":"Free emergency fund calculator: work out your target in months of essential expenses and how long it will take to get there, based on what you can add.",
         "calculators/debt-payoff":"Free debt payoff calculator: enter a balance, APR and monthly payment to estimate your debt-free date and total interest — then test an extra payment.",
+        "calculators/credit-card-payoff":"Free credit card payoff calculator: see your payoff date and total interest for a fixed monthly payment, and what paying only the minimum would cost.",
         "calculators/loan-payment":"Free loan payment calculator for fixed-rate loans: monthly payment, total interest and the true total cost of borrowing, with assumptions shown.",
         "calculators/mortgage-payment":"Free mortgage payment calculator: monthly principal & interest, a PITI estimate, total interest, a year-by-year amortization table and extra-payment savings.",
         "calculators/snowball-avalanche":"Free snowball vs. avalanche calculator: enter up to five debts and compare both payoff orders by debt-free date and total interest, side by side.",
@@ -2241,6 +2281,13 @@
           {"@type":"Question","name":"What does the \"today's dollars\" figure mean?","acceptedAnswer":{"@type":"Answer","text":"It restates the projected balance in current purchasing power by dividing it by (1 + inflation) raised to the years until retirement. A million dollars in 35 years sounds large, but at 3% inflation it buys roughly what $360,923 buys today — the today's-dollars figure is the one to compare with your current spending."}},
           {"@type":"Question","name":"Does this include Social Security, a pension or an employer match?","acceptedAnswer":{"@type":"Answer","text":"No. The projection covers only the savings and contributions you enter. Social Security or state pension income, employer matching contributions, and other income sources would all add to the picture — if your employer matches contributions, include the matched amount in your monthly contribution to see its effect."}},
           {"@type":"Question","name":"Is this a retirement plan or financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational projection based only on the numbers and assumptions you enter — it ignores taxes, fees and the order in which real returns arrive, all of which change real outcomes. Retirement decisions deserve a fuller plan; for personalized guidance, consider a licensed financial adviser or a nonprofit counseling service."}}
+        ]},
+        "calculators/credit-card-payoff":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"How does this calculator work?","acceptedAnswer":{"@type":"Answer","text":"It applies your fixed monthly payment to your balance month by month. Each month, interest is charged at your APR divided by 12 on the balance you still owe, then your payment is subtracted. It repeats until the balance reaches zero and reports the number of months, the total interest, the total you paid and the month you become debt-free."}},
+          {"@type":"Question","name":"How is the minimum-payment comparison calculated?","acceptedAnswer":{"@type":"Answer","text":"The comparison uses one illustrative formula: each month, the payment is that month's interest plus 1% of the balance after that interest is added, with a $25 floor. Real card issuers use different minimum-payment formulas — some use a different percentage, some add fees, and some charge a flat percentage of the balance — so treat this comparison as an illustration of how minimum payments behave, not as a quote from your card issuer."}},
+          {"@type":"Question","name":"Why does paying only the minimum take so much longer?","acceptedAnswer":{"@type":"Answer","text":"Because the minimum payment falls as your balance falls. At first, most of it is interest plus a small slice of the balance, and as the balance shrinks the payment shrinks with it, so progress slows. A fixed payment stays the same every month, so more and more of it reaches the balance itself — which is why the fixed payment clears the same debt years sooner and for far less interest."}},
+          {"@type":"Question","name":"What if my fixed payment does not cover the monthly interest?","acceptedAnswer":{"@type":"Answer","text":"Then the balance will not fall. If your payment is less than or equal to the first month's interest, everything you pay is swallowed by interest and the amount you owe stays the same or grows, so the calculator flags it instead of showing a payoff date. To make progress, the payment must be higher than the monthly interest — on the default example, the first month's interest is about $95.79."}},
+          {"@type":"Question","name":"Is this calculator financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. It is an educational estimate based only on the numbers you enter and the assumptions shown on this page — a constant APR, no new purchases, no fees or penalty rates, and payments at month end. Your card's real figures will differ, because issuers calculate interest on average daily balances. For advice about your own situation, consider a nonprofit credit counselor or a licensed financial adviser."}}
         ]},
         "calculators/net-worth":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
           {"@type":"Question","name":"What is net worth?","acceptedAnswer":{"@type":"Answer","text":"Net worth is what you own minus what you owe. Add up the current value of your assets — cash and bank accounts, retirement and other investment accounts, your home, your vehicles and anything else of value — then subtract everything you still owe, such as a mortgage, a car loan, credit card balances and student loans. The result is a single number that snapshots where you stand today."}},
@@ -2475,6 +2522,56 @@
         out.innerHTML = html;
       }
       $("dpForm").addEventListener("submit", calcDP);
+
+      /* ---------- CREDIT CARD PAYOFF ---------- */
+      function simulateMinimum(balance, apr){
+        var monthlyRate = apr/100/12;
+        var bal = balance, totalInt = 0, months = 0;
+        while (bal > 0.005 && months < 1200){
+          var i = bal*monthlyRate; totalInt += i; bal += i;
+          var pay = i + bal*0.01; /* illustrative formula: that month's interest plus 1% of the balance (after interest is added) */
+          if (pay < 25) pay = 25; /* $25 floor */
+          pay = Math.min(pay, bal);
+          bal -= pay; months++;
+        }
+        return {months: months, interest: totalInt, total: balance + totalInt};
+      }
+      function calcCC(e){
+        if (e) e.preventDefault();
+        var bal = validate($("cc-balance"), function(v){return v>0;});
+        var apr = validate($("cc-apr"), function(v){return v>0 && v<=60;});
+        var pay = validate($("cc-payment"), function(v){return v>0;});
+        var out = $("ccResults");
+        if ([bal,apr,pay].some(isNaN)){ out.innerHTML = '<div class="warnbox"><p style="margin:0"><strong>Check the highlighted fields</strong> — balance, APR and payment must all be numbers above 0.</p></div>'; return; }
+        var firstInt = bal*apr/100/12;
+        if (pay <= firstInt){
+          out.innerHTML = '<div class="warnbox"><p style="margin:0"><strong>This payment will not reduce your balance.</strong> The first month\'s interest alone is about '+fmt(firstInt,currency)+', which meets or exceeds your payment — everything you pay would be swallowed by interest and the balance will not fall. Increase the fixed monthly payment above '+fmt(firstInt,currency)+' to start paying the card off.</p></div>';
+          return;
+        }
+        var fixed = simulateDebt(bal, apr, pay);
+        if (!fixed){
+          out.innerHTML = '<div class="warnbox"><p style="margin:0"><strong>This payment will not reduce your balance.</strong> The first month\'s interest alone is about '+fmt(firstInt,currency)+'. Increase the fixed monthly payment to start paying the card off.</p></div>';
+          return;
+        }
+        var minCase = simulateMinimum(bal, apr);
+        var saved = minCase.interest - fixed.interest;
+        var sooner = minCase.months - fixed.months;
+        out.innerHTML =
+          '<p style="margin-bottom:2px;color:var(--muted)">Estimated payoff date at '+fmt0(pay,currency)+'/month</p><div class="result-big">'+monthName(fixed.months)+'</div>'+
+          '<div class="result-row"><span>Months to pay off</span><b>'+fixed.months+' months</b></div>'+
+          '<div class="result-row"><span>Total interest</span><b>'+fmt(fixed.interest,currency)+'</b></div>'+
+          '<div class="result-row"><span>Total paid</span><b>'+fmt(fixed.total,currency)+'</b></div>'+
+          '<h3 style="margin-top:18px">If you paid only the minimum</h3>'+
+          '<p style="color:var(--muted);font-size:.92rem">Illustrative formula: each month, that month\'s interest plus 1% of the balance, with a $25 floor. Real issuers use different minimum-payment formulas, so this comparison is illustrative — not a quote from any card issuer.</p>'+
+          '<div class="result-row"><span>Months to pay off (minimum only)</span><b>'+minCase.months+' months</b></div>'+
+          '<div class="result-row"><span>Total interest (minimum only)</span><b>'+fmt(minCase.interest,currency)+'</b></div>'+
+          '<div class="result-row"><span>Total paid (minimum only)</span><b>'+fmt(minCase.total,currency)+'</b></div>'+
+          '<h3 style="margin-top:18px">What the fixed payment saves you</h3>'+
+          '<div class="result-row"><span>Interest saved vs. minimum only</span><b style="color:var(--good)">'+fmt(saved,currency)+'</b></div>'+
+          '<div class="result-row"><span>Debt-free sooner</span><b style="color:var(--good)">'+sooner+' months</b></div>'+
+          '<p style="color:var(--muted);font-size:.9rem">Assumes a constant APR, no new purchases or fees, and payments at month end. Real cards use average daily balances, so treat these as close estimates — see the assumptions below.</p>';
+      }
+      $("ccForm").addEventListener("submit", calcCC);
 
       /* ---------- LOAN PAYMENT ---------- */
       function calcLoan(e){
