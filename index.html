@@ -2215,6 +2215,7 @@
           <section class="block"><h2>Site status — November 10, 2026</h2>
             <div class="card">
               <ul class="check-list">
+                <li>SEO pass, November 11, 2026: FAQPage structured data added for the six oldest guides (monthly budget, 50/30/20 rule, emergency fund, compound interest, snowball vs. avalanche, credit card interest), and ten over-long page titles trimmed to 60 characters or fewer.</li>
                 <li>New guide published November 10, 2026: <a href="#/guides/what-is-a-401k">"What Is a 401(k)? A Plain-English Guide for 2026"</a> — what a 401(k) is, how the employer match works, the 2026 contribution limits, and what happens when you change jobs, the second retirement-account guide — taking the site to 19 guide pages (18 full guides plus the glossary) and 51 routes in total.</li>
                 <li>New calculator published November 9, 2026: <a href="#/calculators/debt-to-income">"Debt-to-Income Ratio Calculator"</a> — front-end and back-end DTI from gross monthly income and monthly debt payments, compared with the 28% and 36% guidelines and the historical 43% mark, the site's thirteenth calculator — taking the site to 50 routes in total.</li>
                 <li>New guide published November 7, 2026: <a href="#/guides/roth-vs-traditional-ira">Roth IRA vs. Traditional IRA: Which One Fits You?</a> — the 2026 contribution limits, income and deduction phase-outs, withdrawal rules and a worked example, the first retirement-account guide — taking the site to 18 guide pages (17 full guides plus the glossary) and 49 routes in total.</li>
@@ -2395,8 +2396,8 @@
       var TITLES = {
         "home":"SteadyCents — Steady Money Guidance and Free Calculators",
         "budgeting":"Budgeting Guides & Monthly Budget Calculator | SteadyCents",
-        "saving":"Saving Money: Emergency Funds, Goals & Compound Interest | SteadyCents",
-        "debt":"Debt Education: Payoff Strategies & Interest Explained | SteadyCents",
+        "saving":"Saving: Emergency Funds, Goals & Interest | SteadyCents",
+        "debt":"Debt Education: Payoff Strategies Explained | SteadyCents",
         "credit":"Credit Education: Scores & Reports Explained | SteadyCents",
         "calculators":"Free Financial Calculators | SteadyCents",
         "calculators/budget":"Monthly Budget Calculator (Free, Private) | SteadyCents",
@@ -2413,23 +2414,23 @@
         "calculators/net-worth":"Net Worth Calculator | SteadyCents",
         "calculators/debt-to-income":"Debt-to-Income Ratio Calculator | SteadyCents",
         "guides":"Personal Finance Guides | SteadyCents",
-        "guides/how-to-make-a-monthly-budget":"How to Make a Monthly Budget That Actually Sticks | SteadyCents",
+        "guides/how-to-make-a-monthly-budget":"How to Make a Monthly Budget That Sticks | SteadyCents",
         "guides/50-30-20-rule":"The 50/30/20 Rule, Explained | SteadyCents",
         "guides/needs-vs-wants":"Needs vs. Wants: How to Tell the Difference | SteadyCents",
         "guides/emergency-fund-how-much":"Emergency Fund: How Much Do You Actually Need? | SteadyCents",
         "guides/compound-interest-explained":"Compound Interest, Explained Simply | SteadyCents",
-        "guides/debt-snowball-vs-avalanche":"Debt Snowball vs. Avalanche: Which Pays Off Debt Faster? | SteadyCents",
+        "guides/debt-snowball-vs-avalanche":"Snowball vs. Avalanche: Which Pays Debt Faster | SteadyCents",
         "guides/how-credit-card-interest-works":"How Credit Card Interest Actually Works | SteadyCents",
         "guides/credit-scores-explained-us":"Credit Scores Explained (United States) | SteadyCents",
-        "guides/build-credit-from-scratch":"How to Build Credit From Scratch (United States) | SteadyCents",
-        "guides/sinking-funds":"Sinking Funds: The Budget Line That Ends Surprise Bills | SteadyCents",
-        "guides/biweekly-vs-monthly-payments":"Biweekly vs. Monthly Payments: What Actually Saves Money | SteadyCents",
+        "guides/build-credit-from-scratch":"How to Build Credit From Scratch (US) | SteadyCents",
+        "guides/sinking-funds":"Sinking Funds: End Surprise Bills | SteadyCents",
+        "guides/biweekly-vs-monthly-payments":"Biweekly vs. Monthly Loan Payments | SteadyCents",
         "guides/negotiate-bills":"How to Negotiate Bills Without the Dread | SteadyCents",
         "guides/checking-vs-savings":"Checking vs. Savings Accounts, Explained | SteadyCents",
         "guides/high-yield-savings-account":"How to Choose a High-Yield Savings Account | SteadyCents",
-        "guides/roth-vs-traditional-ira":"Roth IRA vs. Traditional IRA: Which One Fits You? | SteadyCents",
-        "guides/what-is-a-401k":"What Is a 401(k)? A Plain-English Guide for 2026 | SteadyCents",
-        "guides/fed-decision-october-2026":"Fed Decision, October 28, 2026: Hold at 3.75%–4.00% | SteadyCents",
+        "guides/roth-vs-traditional-ira":"Roth IRA vs. Traditional IRA: Which Fits You? | SteadyCents",
+        "guides/what-is-a-401k":"What Is a 401(k)? Guide for 2026 | SteadyCents",
+        "guides/fed-decision-october-2026":"Fed Decision, October 28, 2026: Hold | SteadyCents",
         "guides/check-credit-report-free-us":"How to Check Your Credit Reports Free (US) | SteadyCents",
         "guides/glossary":"Personal Finance Glossary | SteadyCents",
         "us":"United States Personal Finance Hub (USD) | SteadyCents",
@@ -2502,7 +2503,7 @@
       var FAQ_SCHEMAS = {
         "guides/build-credit-from-scratch":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
           {"@type":"Question","name":"How long until I have a credit score?","acceptedAnswer":{"@type":"Answer","text":"A FICO score typically needs around six months of activity on a reported account before it appears. VantageScore models can generate a score sooner, but most lenders use FICO."}},
-          {"@type":"Question","name":"Will checking my own credit hurt my score?","acceptedAnswer":{"@type":"Answer","text":"No. Checking your own reports or score is a \"soft\" inquiry and has no effect. Only applications for new credit create hard inquiries."}},
+          {"@type":"Question","name":"Will checking my own credit hurt my score?","acceptedAnswer":{"@type":"Answer","text":"No. Checking your own reports or score is a “soft” inquiry and has no effect. Only applications for new credit create hard inquiries."}},
           {"@type":"Question","name":"Do I need to carry a balance to build credit?","acceptedAnswer":{"@type":"Answer","text":"No. Paying in full each month builds the same on-time payment history as carrying a balance, without interest charges."}},
           {"@type":"Question","name":"Can my rent payments build credit?","acceptedAnswer":{"@type":"Answer","text":"Only if they are reported to the bureaus. Most landlords do not report on their own; rent-reporting services can add this history for a fee."}},
           {"@type":"Question","name":"What is the fastest legitimate way to start?","acceptedAnswer":{"@type":"Answer","text":"There is no shortcut, but the standard path is fast enough: a secured credit card or credit-builder loan, one small automated payment, on-time payments every month, and patience."}}
@@ -2557,10 +2558,10 @@
           {"@type":"Question","name":"How much of my money is insured at a bank or credit union?","acceptedAnswer":{"@type":"Answer","text":"At an FDIC-insured bank, the standard limit is $250,000 per depositor, per insured bank, for each account ownership category. At a federally insured credit union, NCUA share insurance sets the same standard limit: $250,000 per member, per insured credit union, per ownership category. Balances in the same ownership category at the same institution are added together for the limit, and coverage is automatic when you open the account."}}
         ]},
         "guides/fed-decision-october-2026":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-          {"@type":"Question","name":"When exactly is the decision?","acceptedAnswer":{"@type":"Answer","text":"The FOMC announced its decision on Wednesday, October 28, 2026 at 2:00 p.m. ET, after its October 27-28 meeting: it held the target range at 3.75%-4.00%. A press conference followed at 2:30 p.m. ET. This meeting has no new Summary of Economic Projections (dot plot)."}},
+          {"@type":"Question","name":"When exactly is the decision?","acceptedAnswer":{"@type":"Answer","text":"The FOMC announced its decision on Wednesday, October 28, 2026 at 2:00 p.m. ET, after its October 27–28 meeting: it held the target range at 3.75%–4.00%. A press conference followed at 2:30 p.m. ET. This meeting has no new Summary of Economic Projections (dot plot)."}},
           {"@type":"Question","name":"Does a Fed hike change my existing fixed mortgage?","acceptedAnswer":{"@type":"Answer","text":"No. A fixed-rate mortgage keeps its rate and payment for the whole term, whatever the Fed does. Only new loans are priced at current market rates."}},
           {"@type":"Question","name":"How soon would my credit card APR change after a hike?","acceptedAnswer":{"@type":"Answer","text":"Most variable card APRs are set as the prime rate plus a margin, and the prime rate moves in step with the Fed's target range. If the Fed hiked, most variable APRs would typically rise by the same quarter point within one to two billing cycles."}},
-          {"@type":"Question","name":"Will my savings APY definitely rise after a hike?","acceptedAnswer":{"@type":"Answer","text":"No. Each bank sets its own APYs and chooses whether to pass on some, all, or none of a hike, and changes can take weeks. A hike makes higher APYs possible, never guaranteed."}},
+          {"@type":"Question","name":"Will my savings APY definitely rise after a hike?","acceptedAnswer":{"@type":"Answer","text":"No. Each bank sets its own APYs and chooses whether to pass on some, all, or none of a hike — and changes can take weeks. A hike makes higher APYs possible, never guaranteed."}},
           {"@type":"Question","name":"Does the Fed set mortgage rates?","acceptedAnswer":{"@type":"Answer","text":"No. Mortgage rates follow bond markets and lender pricing. They often move in the same direction as Fed policy over time, but they can move by more, by less, or in the opposite direction around any single decision."}}
         ]},
         "calculators/mortgage-payment":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -2615,6 +2616,33 @@
           {"@type":"Question","name":"Do my credit reports show my credit score?","acceptedAnswer":{"@type":"Answer","text":"No — reports and scores are different things. A report is the full record of your accounts and payment behavior; a score is a number calculated from that record. Checking the report itself is how you verify the raw material every score is built from."}},
           {"@type":"Question","name":"What does it cost to dispute an error on my report?","acceptedAnswer":{"@type":"Answer","text":"Nothing. Disputing is a free right under the Fair Credit Reporting Act: the bureau must investigate, typically within 30 days, and correct or remove information that can't be verified. You never need to pay a company to dispute for you."}},
           {"@type":"Question","name":"What if online identity verification fails when I request a report?","acceptedAnswer":{"@type":"Answer","text":"It happens and is not a red flag by itself. AnnualCreditReport.com explains mail-in options, and you can also order by phone at 1-877-322-8228. Failing the online questions only means the site couldn't confirm your identity automatically."}}
+        ]},
+        "guides/how-to-make-a-monthly-budget":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"What's the best budgeting app?","acceptedAnswer":{"@type":"Answer","text":"The one you'll open. A notes app, a spreadsheet, or paper all work — the method above matters more than the tool, and free tools are enough for most households."}},
+          {"@type":"Question","name":"How do I budget with irregular income?","acceptedAnswer":{"@type":"Answer","text":"Budget from your lowest typical month for essentials, keep one month of expenses as a buffer if you can, and allocate windfall months by percentage rather than spending them by default."}},
+          {"@type":"Question","name":"Should debt payments count as needs or savings?","acceptedAnswer":{"@type":"Answer","text":"Minimum payments are needs — missing them has consequences. Payments above the minimum behave like savings (they build your net worth) and count toward the 20% in the 50/30/20 guideline."}}
+        ]},
+        "guides/50-30-20-rule":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"Is 50/30/20 based on gross or net income?","acceptedAnswer":{"@type":"Answer","text":"Net — your after-tax take-home pay."}},
+          {"@type":"Question","name":"Do employer pension contributions count toward the 20%?","acceptedAnswer":{"@type":"Answer","text":"They're real saving, so you can count them — but keep some of the 20% in your own accessible savings too, especially if you don't yet have an emergency fund."}}
+        ]},
+        "guides/emergency-fund-how-much":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"Is a credit card an emergency fund?","acceptedAnswer":{"@type":"Answer","text":"No. Credit is borrowed money at high interest that must be repaid; an emergency fund is your own money. Relying on credit turns one emergency into months of payments."}},
+          {"@type":"Question","name":"Should I pause all investing until the fund is full?","acceptedAnswer":{"@type":"Answer","text":"Opinions differ, and this is general education, not advice. Many people build the starter cushion first, contribute enough to get any employer pension match, then finish the fund — but the right order depends on your debts, match and job risk."}},
+          {"@type":"Question","name":"What counts as an emergency?","acceptedAnswer":{"@type":"Answer","text":"Unexpected, necessary, urgent: job loss, essential car or home repair, medical bill. A sale, a holiday, or a predictable annual bill does not qualify — save for those separately with sinking funds."}}
+        ]},
+        "guides/compound-interest-explained":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"How often should interest compound?","acceptedAnswer":{"@type":"Answer","text":"More frequent is slightly better (daily > monthly > annually), but the difference is small next to the rate itself and the amount you save. Don't choose an account on compounding frequency alone."}},
+          {"@type":"Question","name":"What's the \"rule of 72\"?","acceptedAnswer":{"@type":"Answer","text":"A shortcut: divide 72 by your annual rate to estimate the years for money to double. At 6%, about 12 years. It's an approximation — close enough for planning, not for contracts."}}
+        ]},
+        "guides/debt-snowball-vs-avalanche":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"Does the snowball ever beat the avalanche on interest?","acceptedAnswer":{"@type":"Answer","text":"No — the avalanche is mathematically optimal for interest, given the same payments. When both methods target the same debt first (as in the example above), early results can look identical."}},
+          {"@type":"Question","name":"What if a minimum payment doesn't cover the monthly interest?","acceptedAnswer":{"@type":"Answer","text":"Then that balance grows despite paying. This happens with very low minimums on high-APR debt; the fix is directing extra money there regardless of method, or speaking to the lender or a nonprofit credit counselor about options."}}
+        ]},
+        "guides/how-credit-card-interest-works":{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+          {"@type":"Question","name":"Why did my interest charge go up when my balance went down?","acceptedAnswer":{"@type":"Answer","text":"Interest is charged in arrears on the previous cycle's average daily balance — and if you lost your grace period, new purchases accrue from day one. The charge reflects last month's balances, not today's."}},
+          {"@type":"Question","name":"Is APR the same as the interest rate?","acceptedAnswer":{"@type":"Answer","text":"For credit cards, effectively yes — card APRs are the rate used for interest calculations and typically there's no separate \"interest rate.\" For loans, APR can also fold in fees, which is why it's the better comparison number."}},
+          {"@type":"Question","name":"Does paying twice a month help?","acceptedAnswer":{"@type":"Answer","text":"Slightly — it lowers the average daily balance. The bigger win is the total paid per month and restoring your grace period by clearing the full balance."}}
         ]}
       };
       var metaDesc = document.querySelector('meta[name="description"]');
